@@ -37,7 +37,30 @@
       }
     </style>
 
-    
+<script>
+  function documentLoad() {
+    var cidades = fetch("../dados.json")
+    .then(results => results.json())
+    .then((results) => {
+      var resultjalapao = results.find(
+        function(lugar) {return lugar.nome == "Jalapão"}
+      );
+      var jalapao_titulo = document.getElementById("titulo_jalapao");
+      jalapao_titulo.innerHTML = resultjalapao.nome;
+
+      var jalapao_descs = document.getElementById("descs");
+      for (var descricoes of resultjalapao.descricao){
+        var novadesc = document.createElement("p");
+        novadesc.setAttribute("class", "lead tshadow fw-bold");
+        novadesc.innerHTML = descricoes;
+        jalapao_descs.appendChild(novadesc);
+      }
+    }
+    );
+  }
+
+  document.addEventListener('DOMContentLoaded', documentLoad);
+</script>
     <!-- Custom styles for this template -->
     <link href="../CSS/cover.css" rel="stylesheet">
   </head>
@@ -54,10 +77,9 @@
   </header>
 
   <main class="px-3">
-    <h1 class="tshadow">Jalapão</h1>
-    <p class="lead tshadow fw-bold">Ah! O Jalapão! Um paraíso natural no meio do Brasil!</p>
-    <p class="lead tshadow fw-bold">A região Encantos do Jalapão é um convite a contemplação e a grandes aventuras…se você quer viver experiências únicas e inesquecíveis, este é o lugar!</p>
-    <p class="lead tshadow fw-bold">Já imaginou mergulhar e não afundar?! Por aqui, isso é possível! Nos fervedouros, a pressão da água é tão forte que você não conseguirá encostar no fundo. Surreal, né?! E o que falar da Cachoeira da Velha?! É impressionante.</p>
+    <h1 id="titulo_jalapao" class="tshadow"></h1>
+    <div id="descs">
+    </div>
     <p class="lead tshadow">
       <a href="https://goo.gl/maps/HRcJTPbiKwaq1k3m8" target="_blank" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Ver localização</a>
     </p>

@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "Lago Azul de Luzimangues",
+        "introducao": "Um belíssimo lago natural de água azul",
+        "descricao": [
+            "A Lago Azul parece ter sido tirada diretamente de uma pintura, é uma verdadeira obra de arte da natureza!",
+            "Localizda em Luzimangues, um distrito de Porto Nacional-TO, o lago se tornou ainda mais popular devido a ter se tornado uma rota para os ciclistas do Tocantins, sendo hoje uma parada obrigatória para os amantes da natureza."
+        ]
+    },
+    {
+        "nome": "Jalapão",
+        "introducao": "Dono de uma beleza sem igual, encanta a todos que passam por ele",
+        "descricao": [
+            "Ah! O Jalapão! Um paraíso natural no meio do Brasil!",
+            "A região Encantos do Jalapão é um convite a contemplação e a grandes aventuras…se você quer viver experiências únicas e inesquecíveis, este é o lugar!",
+            "Já imaginou mergulhar e não afundar?! Por aqui, isso é possível! Nos fervedouros, a pressão da água é tão forte que você não conseguirá encostar no fundo. Surreal, né?! E o que falar da Cachoeira da Velha?! É impressionante."
+        ]
+    },
+    {
+        "nome": "Ilha do Bananal",
+        "introducao": "Paraíso dos nossos povos ancestrais, a Ilha do Bananal é a maior ilha fluvial do mundo",
+        "descricao": [
+            "Sua riqueza se traduz na calma dos rios Javaé e Araguaia, que cercam a ilha e propiciam uma grande variedade de peixes, um sonho para os amantes da pesca esportiva! E esta possibilidade se estende a vários municípios!",
+            "A variedade das aves é, também, oportunidade para fazer Turismo de Observação de Aves e, durante o passeio, com um pouco de sorte, você também poderá registrar jacarés, ariranhas, veados e, quem sabe, uma onça curiosa observando escondida na mata."
+        ]
+    }
+]

@@ -1,71 +1,102 @@
 <!doctype html>
 <html lang="pt-BR" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <link rel="shortcut icon" href="../ICON/favicon.ico" type="image/x-icon">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Ilha do Bananal</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="../ICON/favicon.ico" type="image/x-icon">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Ilha do Bananal</title>
 
-    
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+    body {
+      background-image: url(https://www.adventureclub.com.br/wp-content/uploads/2021/02/Cantao-Ilha-do-Bananal-topo.jpeg);
+      background-size: cover;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="../CSS/cover.css" rel="stylesheet">
+</head>
+<script>
+  function documentLoad() {
+    var cidades = fetch("../dados.json")
+    .then(results => results.json())
+    .then((results) => {
+      var resultbananal = results.find(
+        function(lugar) {return lugar.nome == "Ilha do Bananal"}
+      );
+      var bananal_titulo = document.getElementById("titulo_bananal");
+      bananal_titulo.innerHTML = resultbananal.nome;
+
+      var bananal_descs = document.getElementById("descs");
+      for (var descricoes of resultbananal.descricao){
+        var novadesc = document.createElement("p");
+        novadesc.setAttribute("class", "lead tshadow fw-bold");
+        novadesc.innerHTML = descricoes;
+        bananal_descs.appendChild(novadesc);
       }
-      body {
-        background-image: url(https://www.adventureclub.com.br/wp-content/uploads/2021/02/Cantao-Ilha-do-Bananal-topo.jpeg);
-        background-size: cover;
-      }
-    </style>
+    }
+    );
+  }
 
-    
-    <!-- Custom styles for this template -->
-    <link href="../CSS/cover.css" rel="stylesheet">
-  </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0" >TocanTour</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="../index.html">Início</a>
-      </nav>
-    </div>
-  </header>
+  document.addEventListener('DOMContentLoaded', documentLoad);
+</script>
+<body class="d-flex h-100 text-center text-white bg-dark">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="float-md-start mb-0">TocanTour</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link active" aria-current="page" href="../index.html">Início</a>
+        </nav>
+      </div>
+    </header>
 
-  <main class="px-3">
-    <h1 class="tshadow">Ilha do Bananal</h1>
-    <p class="lead tshadow fw-bold">Sua riqueza se traduz na calma dos rios Javaé e Araguaia, que cercam a ilha e propiciam uma grande variedade de peixes, um sonho para os amantes da pesca esportiva! E esta possibilidade se estende a vários municípios!</p>
-    <p class="lead tshadow fw-bold">A variedade das aves é, também, oportunidade para fazer Turismo de Observação de Aves e, durante o passeio, com um pouco de sorte, você também poderá registrar jacarés, ariranhas, veados e, quem sabe, uma onça curiosa observando escondida na mata.</p>
-    <p class="lead tshadow">
-      <a href="https://goo.gl/maps/tponkAJv9M2iqjf99" target="_blank" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Ver localização</a>
-    </p>
-  </main>
+    <main class="px-3">
+      <h1 id="titulo_bananal" class="tshadow"></h1>
+      <div id="descs">
+      </div>
+      <p class="lead tshadow">
+        <a href="https://goo.gl/maps/tponkAJv9M2iqjf99" target="_blank"
+          class="btn btn-lg btn-secondary fw-bold border-white bg-white">Ver localização</a>
+      </p>
+    </main>
 
-  <footer class="mt-auto text-white-50">
-  </footer>
-</div>
+    <footer class="mt-auto text-white-50">
+    </footer>
+  </div>
 
 
-    
-  </body>
+
+</body>
+
 </html>
