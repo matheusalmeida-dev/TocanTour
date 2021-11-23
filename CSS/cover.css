@@ -101,3 +101,8 @@ body {
 .tpergunta{
   color: black;
 }
+
+#footerpage{
+  display: flex;
+  flex-direction: row;
+}

@@ -120,3 +120,8 @@ body {
 .tpergunta{
   color: #006768;
 }
+
+.footerpage{
+  display: flex;
+  flex-direction: row;
+}
